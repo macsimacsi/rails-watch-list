@@ -1,0 +1,14 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://preview.redd.it/natccwexbjw51.jpg?auto=webp&s=deb391a1bcff0ca72f24e0e9e3f264edfbfb6ef1);">
+  <div class="container">
+    <h1>Muchas pelis, <strong>mucho virus</strong> y MUY <strong>poca calidad!</strong>!</h1>
+    <p>Bienvenidos al Netflix Trucho!</p>
+  </div>
+</div>
+<div class="cards">
+  <% @lists.each do |list| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.istockphoto.com/id/1040250650/es/foto/fondo-de-estudio-blanco.jpg?s=612x612&w=0&k=20&c=E8ObrYH_ftiHT6ehVtGqGYszCPCLIraLA17g4B17mJ8=)">
+    <ul>
+      <h2><%= link_to list.name, list_path(list) %></h2>
+    </ul>
+    <% end %>
+</div>

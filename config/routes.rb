@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
 
-  resources :lists, except: %i[list update] do
-    resources :bookmarks, only: %i[create]
+  resources :lists, except: %i[edit update] do
+    resources :bookmarks, only: %i[new create]
   end
 
   resources :bookmarks, only: :destroy
